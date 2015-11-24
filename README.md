@@ -177,7 +177,6 @@ INTENT:
             self.ui.success('Success!')
         else:
             self.ui.error('Error!')
-
 # 注册 PoC
 register(SendIntent)
 
