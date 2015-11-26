@@ -204,10 +204,13 @@ class BaseConsole(Cmd):
         return [i for i in ["options"] if i.startswith(text)]
 
     def do_info(self, args):
-        self.ui.help(
-            title="Payload Info",
-            options=[[i,PAYLOAD.poc.info.get(i)] for i in PAYLOAD.poc.info.keys()],
-        )
+        if PAYLOAD and PAYLOAD.has_key('poc'):
+            self.ui.help(
+                title="Payload Info",
+                options=[[i,PAYLOAD.poc.info.get(i)] for i in PAYLOAD.poc.info.keys()],
+            )
+        else:
+            self.ui.info("Please use payload first!")
         # for i in PAYLOAD.poc.info.keys():
         #     print u"{key}:\n{orz}\n{value}\n".format(key=i, orz='=' * len(i),value=PAYLOAD.poc.info.get(i))
 
