@@ -1,5 +1,7 @@
-## W0rmH0le
-> Android `wormhole`漏洞测试工具
+W0rmH0le [![Build Status](https://travis-ci.org/Medicean/w0rmHole.svg?branch=master)](https://travis-ci.org/Medicean/w0rmHole)
+========
+
+> Android `wormhole` 漏洞测试工具
 
 ### 说明
 Forked from [Antoor/w0rm](https://github.com/antoor/w0rm).
